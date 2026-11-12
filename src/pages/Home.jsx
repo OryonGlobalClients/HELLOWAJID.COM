@@ -7,10 +7,11 @@ import {
   Play, Pause, Volume2, VolumeX
 } from 'lucide-react';
 import { DESTINATIONS } from '../data/destinations';
-import { GALLERY_ITEMS } from '../data/gallery';
+import { useData } from '../context/DataContext';
 import DestinationModal from '../components/DestinationModal';
 
 export default function Home() {
+  const { gallery } = useData();
   const [selectedDestination, setSelectedDestination] = useState(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
@@ -67,7 +68,7 @@ export default function Home() {
     .map((id) => DESTINATIONS.find((d) => d.id === id))
     .filter(Boolean);
 
-  const previewGallery = GALLERY_ITEMS.slice(0, 6);
+  const previewGallery = gallery.slice(0, 6);
 
   const whyChooseUs = [
     {

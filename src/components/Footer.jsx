@@ -182,9 +182,17 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-6 sm:pt-8 border-t border-forest-900/70 flex flex-col sm:flex-row items-center justify-between text-[11px] sm:text-xs text-cream-400/50 gap-3 text-center sm:text-left">
           <p>© {new Date().getFullYear()} Odisha Tour & Travel. Similipal National Park Eco-Initiative. All rights reserved.</p>
-          <p className="flex items-center justify-center gap-1.5">
-            Designed for wanderers with <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> and reverence for Mother Nature.
-          </p>
+          <div className="flex items-center justify-center gap-4">
+            <Link
+              to="/admin"
+              className="text-forest-400/70 hover:text-forest-300 transition-colors"
+            >
+              Admin Portal
+            </Link>
+            <p className="flex items-center justify-center gap-1.5">
+              Designed with <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> for Nature.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

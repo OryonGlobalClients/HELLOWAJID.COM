@@ -1,17 +1,19 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, MapPin, Maximize2, Compass } from 'lucide-react';
-import { GALLERY_ITEMS, GALLERY_CATEGORIES } from '../data/gallery';
+import { GALLERY_CATEGORIES } from '../data/gallery';
+import { useData } from '../context/DataContext';
 import Lightbox from '../components/Lightbox';
 
 export default function Gallery() {
+  const { gallery } = useData();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const filteredItems = useMemo(() => {
-    if (selectedCategory === 'all') return GALLERY_ITEMS;
-    return GALLERY_ITEMS.filter((item) => item.category === selectedCategory);
-  }, [selectedCategory]);
+    if (selectedCategory === 'all') return gallery;
+    return gallery.filter((item) => item.category === selectedCategory);
+  }, [selectedCategory, gallery]);
 
   const handleOpenLightbox = (index) => {
     setLightboxIndex(index);
@@ -68,8 +70,8 @@ export default function Gallery() {
           {GALLERY_CATEGORIES.map((cat) => {
             const isActive = selectedCategory === cat.id;
             const count = cat.id === 'all'
-              ? GALLERY_ITEMS.length
-              : GALLERY_ITEMS.filter((item) => item.category === cat.id).length;
+              ? gallery.length
+              : gallery.filter((item) => item.category === cat.id).length;
 
             return (
               <button

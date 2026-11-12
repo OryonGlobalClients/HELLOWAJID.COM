@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, ShieldCheck, Sparkles, ArrowRight, Eye, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { PACKAGES } from '../data/packages';
+import { useData } from '../context/DataContext';
 import PackageModal from '../components/PackageModal';
 
 export default function Packages() {
+  const { packages } = useData();
   const [selectedPackage, setSelectedPackage] = useState(null);
 
   return (
@@ -44,7 +45,7 @@ export default function Packages() {
       ========================================= */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14 sm:mb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
-          {PACKAGES.map((pkg, index) => (
+          {packages.map((pkg, index) => (
             <motion.div
               key={pkg.id}
               initial={{ opacity: 0, y: 15 }}
