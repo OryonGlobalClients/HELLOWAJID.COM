@@ -104,12 +104,12 @@ export default function Home() {
       ========================================= */}
       <section className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden pt-20 pb-16">
         
-        {/* Fullscreen Video of Melanistic Tiger in Similipal */}
+        {/* Fullscreen Video of Odisha Wildlife & Nature */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video
             ref={videoRef}
-            src="/videos/hero-melanistic-tiger.mp4"
-            poster="/images/hero/hero-melanistic-tiger.jpg"
+            src="/videos/intro-wildlife.mp4"
+            poster="/images/hero/hero-intro-wildlife.jpg"
             autoPlay
             loop
             muted
