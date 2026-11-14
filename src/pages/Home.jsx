@@ -4,15 +4,18 @@ import { motion } from 'framer-motion';
 import { 
   Compass, ArrowDown, MapPin, ArrowRight, ShieldCheck, 
   Sparkles, Camera, Mountain, Trees, Waves, Eye, ChevronRight,
-  Play, Pause, Volume2, VolumeX
+  Play, Pause, Volume2, VolumeX, Clock, Users, CheckCircle2
 } from 'lucide-react';
 import { DESTINATIONS } from '../data/destinations';
+import { PACKAGES } from '../data/packages';
 import { useData } from '../context/DataContext';
 import DestinationModal from '../components/DestinationModal';
+import PackageModal from '../components/PackageModal';
 
 export default function Home() {
   const { gallery } = useData();
   const [selectedDestination, setSelectedDestination] = useState(null);
+  const [selectedPackage, setSelectedPackage] = useState(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
@@ -218,123 +221,143 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* =========================================
-          SIMILIPAL SPOTLIGHT (Primary Destination)
+            {/* =========================================
+          SIMILIPAL SPOTLIGHT CARD (Primary Destination)
       ========================================= */}
-      <section className="py-14 sm:py-20 lg:py-28 relative overflow-hidden bg-gradient-to-b from-[#08140c] via-[#0b1c11] to-[#08140c]">
+      <section className="py-12 sm:py-16 lg:py-24 relative overflow-hidden bg-[#08140c]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          {/* Main Card Container */}
+          <div className="relative rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#0c2215]/95 via-[#08180e]/95 to-[#051109]/95 border border-forest-600/30 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85),0_0_50px_rgba(34,197,94,0.08)] p-6 sm:p-10 lg:p-12 xl:p-14 overflow-hidden backdrop-blur-md">
             
-            {/* Left text spotlight */}
-            <div className="lg:col-span-5 space-y-4 sm:space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/60 border border-forest-600/40 text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-forest-300">
-                <Trees className="w-3.5 h-3.5 text-forest-400" />
-                <span>Primary Destination</span>
-              </div>
+            {/* Ambient Background Glows */}
+            <div className="absolute -top-32 -left-32 w-80 h-80 bg-forest-500/15 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-forest-400/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-cream-100 leading-tight">
-                Similipal <br />
-                <span className="italic font-normal text-forest-300">National Park</span>
-              </h2>
-
-              <p className="text-sm sm:text-base text-cream-200/80 leading-relaxed font-light">
-                Spanning over 2,750 square kilometers of virgin sal canopies in Mayurbhanj, Similipal is a designated UNESCO World Biosphere Reserve. It is the sacred sanctuary of Royal Bengal Tigers, rare melanistic (black) tigers, wild elephant herds, and cascading 399m waterfalls.
-              </p>
-
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 py-1 sm:py-2">
-                <div className="p-3.5 sm:p-4 rounded-2xl bg-forest-950/70 border border-forest-800/60">
-                  <span className="block font-serif text-xl sm:text-2xl font-bold text-forest-400">2,750+</span>
-                  <span className="text-[10px] sm:text-xs text-cream-400/80 uppercase tracking-wider">Sq. Km Wilderness</span>
+              {/* Left text spotlight */}
+              <div className="lg:col-span-5 space-y-4 sm:space-y-6">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900/80 border border-forest-500/40 text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-forest-300 shadow-sm">
+                  <Trees className="w-3.5 h-3.5 text-forest-400" />
+                  <span>Primary Destination</span>
                 </div>
-                <div className="p-3.5 sm:p-4 rounded-2xl bg-forest-950/70 border border-forest-800/60">
-                  <span className="block font-serif text-xl sm:text-2xl font-bold text-forest-400">1,076+</span>
-                  <span className="text-[10px] sm:text-xs text-cream-400/80 uppercase tracking-wider">Flora Species</span>
+                
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-cream-100 leading-tight">
+                  Similipal <br />
+                  <span className="italic font-normal text-forest-300">National Park</span>
+                </h2>
+
+                <p className="text-sm sm:text-base text-cream-200/85 leading-relaxed font-light">
+                  Spanning over 2,750 square kilometers of virgin sal canopies in Mayurbhanj, Similipal is a designated UNESCO World Biosphere Reserve. It is the sacred sanctuary of Royal Bengal Tigers, rare melanistic (black) tigers, wild elephant herds, and cascading 399m waterfalls.
+                </p>
+
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 py-1 sm:py-2">
+                  <div className="p-3.5 sm:p-4 rounded-2xl bg-forest-950/80 border border-forest-800/60 shadow-inner">
+                    <span className="block font-serif text-xl sm:text-2xl font-bold text-forest-400">2,750+</span>
+                    <span className="text-[10px] sm:text-xs text-cream-400/80 uppercase tracking-wider font-medium">Sq. Km Wilderness</span>
+                  </div>
+                  <div className="p-3.5 sm:p-4 rounded-2xl bg-forest-950/80 border border-forest-800/60 shadow-inner">
+                    <span className="block font-serif text-xl sm:text-2xl font-bold text-forest-400 mb-1">1,076+</span>
+                    <span className="inline-block text-[9px] sm:text-[10px] font-bold text-white bg-forest-600/90 border border-forest-400/30 px-2 py-0.5 rounded-md uppercase tracking-wider">
+                      Flora Species
+                    </span>
+                  </div>
+                </div>
+
+                <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-5">
+                  <Link
+                    to="/similipal-safaris"
+                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-forest-300 hover:text-white transition-colors group cursor-pointer touch-manipulation"
+                  >
+                    <span>Explore Similipal Safaris</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <span className="text-forest-700 hidden sm:inline">•</span>
+                  <Link
+                    to="/packages"
+                    className="text-xs sm:text-sm font-semibold text-cream-300/70 hover:text-white transition-colors"
+                  >
+                    View 2D/3D Packages
+                  </Link>
                 </div>
               </div>
 
-              <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
-                <Link
-                  to="/destinations"
-                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-forest-300 hover:text-white transition-colors group"
-                >
-                  <span>Explore Similipal Safaris</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <span className="text-forest-700 hidden sm:inline">•</span>
-                <Link
-                  to="/packages"
-                  className="text-xs sm:text-sm font-semibold text-cream-300/70 hover:text-white transition-colors"
-                >
-                  View 2D/3D Packages
-                </Link>
-              </div>
-            </div>
+              {/* Right photographic composition with Melanistic Tiger and Barehipani Waterfall */}
+              <div className="lg:col-span-7 grid grid-cols-2 gap-3 sm:gap-4">
+                
+                {/* Column 1 */}
+                <div className="space-y-3 sm:space-y-4">
+                  {/* Melanistic Tiger */}
+                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/5] border border-forest-700/50 shadow-2xl group bg-forest-950">
+                    <img
+                      src="/images/hero/hero-melanistic-tiger.jpg"
+                      alt="Rare Melanistic Tiger in Similipal National Park"
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                    <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
+                      <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-forest-300">Wildlife Sanctuary</span>
+                      <p className="text-xs sm:text-sm font-serif font-semibold text-white truncate">Melanistic Tiger</p>
+                    </div>
+                  </div>
 
-            {/* Right photographic composition with local files */}
-            <div className="lg:col-span-7 grid grid-cols-2 gap-3 sm:gap-4">
-              <div className="space-y-3 sm:space-y-4">
-                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/5] border border-forest-800/50 shadow-2xl group">
-                  <img
-                    src="/images/gallery/gallery-tiger.jpg"
-                    alt="Royal Bengal Tiger Similipal"
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-forest-300">Wildlife Sanctuary</span>
-                    <p className="text-xs sm:text-sm font-serif font-semibold text-white truncate">Royal Bengal Tiger</p>
+                  {/* Royal Bengal Tiger in Sal Canopies */}
+                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] border border-forest-700/50 shadow-2xl group bg-forest-950">
+                    <img
+                      src="/images/gallery/gallery-tiger.jpg"
+                      alt="Royal Bengal Tiger in Virgin Sal Canopies"
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                    <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
+                      <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-forest-300">Canopy Trails</span>
+                      <p className="text-xs sm:text-sm font-serif font-semibold text-white truncate">Royal Bengal Tiger</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] border border-forest-800/50 shadow-2xl group">
-                  <img
-                    src="/images/destinations/joranda.jpg"
-                    alt="Joranda Falls Similipal"
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-forest-300">Waterfalls</span>
-                    <p className="text-xs sm:text-sm font-serif font-semibold text-white truncate">Joranda Falls (181m)</p>
+                {/* Column 2 */}
+                <div className="space-y-3 sm:space-y-4 pt-4 sm:pt-8">
+                  {/* Barehipani Waterfall */}
+                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] border border-forest-700/50 shadow-2xl group bg-forest-950">
+                    <img
+                      src="/images/destinations/barehipani.jpg"
+                      alt="Barehipani Waterfall Similipal"
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                    <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
+                      <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-forest-300">Majestic Falls</span>
+                      <p className="text-xs sm:text-sm font-serif font-semibold text-white truncate">Barehipani Falls (399m)</p>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              <div className="space-y-3 sm:space-y-4 pt-4 sm:pt-8">
-                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] border border-forest-800/50 shadow-2xl group">
-                  <img
-                    src="/images/destinations/barehipani.jpg"
-                    alt="Barehipani Waterfall"
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-forest-300">Majestic Falls</span>
-                    <p className="text-xs sm:text-sm font-serif font-semibold text-white truncate">Barehipani Falls (399m)</p>
+                  {/* Wild Elephant Herd */}
+                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/5] border border-forest-700/50 shadow-2xl group bg-forest-950">
+                    <img
+                      src="/images/gallery/gallery-elephant.jpg"
+                      alt="Wild Asian Elephants Similipal"
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                    <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
+                      <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-forest-300">Wildlife Corridor</span>
+                      <p className="text-xs sm:text-sm font-serif font-semibold text-white truncate">Wild Asian Elephants</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/5] border border-forest-800/50 shadow-2xl group">
-                  <img
-                    src="/images/gallery/gallery-elephant.jpg"
-                    alt="Wild Asian Elephants Similipal"
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
-                    <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-forest-300">Corridor</span>
-                    <p className="text-xs sm:text-sm font-serif font-semibold text-white truncate">Wild Asian Elephants</p>
-                  </div>
-                </div>
               </div>
 
             </div>
 
           </div>
+
         </div>
       </section>
 
@@ -559,6 +582,12 @@ export default function Home() {
       <DestinationModal
         destination={selectedDestination}
         onClose={() => setSelectedDestination(null)}
+      />
+
+      {/* Package detail modal when clicking safari details */}
+      <PackageModal
+        pkg={selectedPackage}
+        onClose={() => setSelectedPackage(null)}
       />
     </div>
   );

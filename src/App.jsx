@@ -12,6 +12,7 @@ import Gallery from './pages/Gallery';
 import Packages from './pages/Packages';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
+import SimilipalSafaris from './pages/SimilipalSafaris';
 
 export default function App() {
   const location = useLocation();
@@ -31,6 +32,8 @@ export default function App() {
             <Route path="/packages" element={<Packages />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/similipal-safaris" element={<SimilipalSafaris />} />
+            <Route path="/explore-similipal" element={<SimilipalSafaris />} />
             {/* Fallback to Home */}
             <Route path="*" element={<Home />} />
           </Routes>
