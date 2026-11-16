@@ -124,17 +124,27 @@ export default function DestinationModal({ destination, onClose }) {
               <span className="text-[11px] text-cream-400/70 text-center sm:text-left">
                 Plan your guided tour to {destination.name}
               </span>
-              <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto">
                 <button
                   onClick={onClose}
-                  className="w-1/2 sm:w-auto px-4 py-2.5 rounded-full border border-forest-700/60 text-xs font-medium text-cream-200 hover:bg-forest-900/60 transition-colors touch-manipulation"
+                  className="px-4 py-2.5 rounded-full border border-forest-700/60 text-xs font-medium text-cream-200 hover:bg-forest-900/60 transition-colors touch-manipulation"
                 >
                   Close
                 </button>
+                {destination.id === 'similipal' && (
+                  <Link
+                    to="/explore-similipal"
+                    onClick={onClose}
+                    className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full bg-forest-700 hover:bg-forest-600 text-white text-xs font-semibold uppercase tracking-wider shadow-md touch-manipulation"
+                  >
+                    <span>Explore Safaris</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                )}
                 <Link
                   to={`/contact?destination=${encodeURIComponent(destination.name)}`}
                   onClick={onClose}
-                  className="w-1/2 sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-forest-500 to-forest-600 hover:from-forest-400 text-white text-xs font-semibold uppercase tracking-wider shadow-lg touch-manipulation"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-forest-500 to-forest-600 hover:from-forest-400 text-white text-xs font-semibold uppercase tracking-wider shadow-lg touch-manipulation"
                 >
                   <span>Book Tour</span>
                   <ArrowRight className="w-3.5 h-3.5" />

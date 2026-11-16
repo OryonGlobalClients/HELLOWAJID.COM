@@ -389,48 +389,64 @@ export default function Home() {
 
           {/* Cards Grid: 10 Destinations */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5">
-            {featuredDestinations.map((dest) => (
-              <motion.div
-                key={dest.id}
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.3 }}
-                onClick={() => setSelectedDestination(dest)}
-                className="group relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] cursor-pointer border border-forest-900/60 bg-forest-950 shadow-xl touch-manipulation active:scale-[0.99]"
-              >
-                {/* Background Image */}
-                <img
-                  src={dest.image}
-                  alt={dest.name}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                />
+            {featuredDestinations.map((dest) => {
+              const isSimilipal = dest.id === 'similipal';
 
-                {/* Dark Vignette Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:via-black/20 transition-colors" />
+              const cardInner = (
+                <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] cursor-pointer border border-forest-900/60 bg-forest-950 shadow-xl touch-manipulation active:scale-[0.99] h-full w-full">
+                  {/* Background Image */}
+                  <img
+                    src={dest.image}
+                    alt={dest.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  />
 
-                {/* Minimal Label Badge */}
-                <div className="absolute top-3.5 right-3.5">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-forest-300 border border-white/10">
-                    {dest.categoryLabel.split(' ')[0]}
-                  </span>
-                </div>
+                  {/* Dark Vignette Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:via-black/20 transition-colors" />
 
-                {/* Small Destination Name and Location Label */}
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="font-serif text-lg font-bold text-white group-hover:text-cream-200 transition-colors leading-tight">
-                    {dest.name}
-                  </h3>
-                  <div className="flex items-center gap-1.5 text-xs text-cream-300/80 mt-1">
-                    <MapPin className="w-3.5 h-3.5 text-forest-400 shrink-0" />
-                    <span className="truncate">{dest.location}</span>
+                  {/* Minimal Label Badge */}
+                  <div className="absolute top-3.5 right-3.5">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-forest-300 border border-white/10">
+                      {dest.categoryLabel.split(' ')[0]}
+                    </span>
                   </div>
-                  <div className="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between text-[11px] text-forest-400 font-medium">
-                    <span>Explore details</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+
+                  {/* Small Destination Name and Location Label */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 className="font-serif text-lg font-bold text-white group-hover:text-cream-200 transition-colors leading-tight">
+                      {dest.name}
+                    </h3>
+                    <div className="flex items-center gap-1.5 text-xs text-cream-300/80 mt-1">
+                      <MapPin className="w-3.5 h-3.5 text-forest-400 shrink-0" />
+                      <span className="truncate">{dest.location}</span>
+                    </div>
+                    <div className="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between text-[11px] text-forest-400 font-medium">
+                      <span>{isSimilipal ? 'Explore Similipal' : 'Explore details'}</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              );
+
+              return (
+                <motion.div
+                  key={dest.id}
+                  whileHover={{ y: -6 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {isSimilipal ? (
+                    <Link to="/explore-similipal" className="block h-full">
+                      {cardInner}
+                    </Link>
+                  ) : (
+                    <div onClick={() => setSelectedDestination(dest)} className="h-full">
+                      {cardInner}
+                    </div>
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
 
         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { MapPin, ArrowRight, Compass, Star, Filter, Eye } from 'lucide-react';
 import { DESTINATIONS, CATEGORIES } from '../data/destinations';
 import DestinationModal from '../components/DestinationModal';
@@ -131,14 +132,25 @@ export default function Destinations() {
 
                   {/* Explore More Button */}
                   <div className="pt-2 sm:pt-3">
-                    <button
-                      onClick={() => setActiveModalDest(dest)}
-                      className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-forest-800/80 hover:bg-forest-600 text-white font-medium text-xs uppercase tracking-wider border border-forest-600/40 backdrop-blur-sm transition-all duration-300 group-hover:shadow-lg touch-manipulation active:scale-[0.98]"
-                    >
-                      <Eye className="w-3.5 h-3.5 text-forest-300" />
-                      <span>Explore More</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-forest-300 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    {dest.id === 'similipal' ? (
+                      <Link
+                        to="/explore-similipal"
+                        className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-gradient-to-r from-forest-500 to-forest-600 hover:from-forest-400 text-white font-semibold text-xs uppercase tracking-wider border border-forest-500/40 backdrop-blur-sm transition-all duration-300 shadow-lg touch-manipulation active:scale-[0.98]"
+                      >
+                        <Eye className="w-3.5 h-3.5 text-forest-200" />
+                        <span>Explore Similipal</span>
+                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    ) : (
+                      <button
+                        onClick={() => setActiveModalDest(dest)}
+                        className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-forest-800/80 hover:bg-forest-600 text-white font-medium text-xs uppercase tracking-wider border border-forest-600/40 backdrop-blur-sm transition-all duration-300 group-hover:shadow-lg touch-manipulation active:scale-[0.98]"
+                      >
+                        <Eye className="w-3.5 h-3.5 text-forest-300" />
+                        <span>Explore More</span>
+                        <ArrowRight className="w-3.5 h-3.5 text-forest-300 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    )}
                   </div>
                 </div>
               </motion.div>
