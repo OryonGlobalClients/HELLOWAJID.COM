@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ChevronLeft, ChevronRight, Play, Pause, 
-  Maximize2, Trees
-} from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Lightbox from './Lightbox';
 
 const SIMILIPAL_SLIDES = [
@@ -142,48 +139,12 @@ export default function SimilipalCardSlideshow() {
 
   return (
     <div className="w-full">
-      {/* Top Header of the Page & Slider Controls */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8">
-        <div>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900/85 border border-forest-500/40 text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-forest-300 shadow-md mb-3">
-            <Trees className="w-3.5 h-3.5 text-forest-400" />
-            <span>UNESCO World Biosphere Reserve • Mayurbhanj</span>
-          </div>
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-cream-100 leading-tight">
-            Explore Similipal <br className="hidden sm:inline" />
-            <span className="italic font-normal text-forest-300">Safaris & Showcase</span>
-          </h1>
-        </div>
-
-        {/* Play/Pause & Counter Controls */}
-        <div className="flex items-center gap-2.5 sm:gap-3 self-start sm:self-auto bg-forest-950/80 border border-forest-800/80 px-4 py-2 rounded-2xl backdrop-blur-md">
-          <span className="text-xs text-cream-300 font-mono tracking-wider font-semibold">
-            {String(currentIndex + 1).padStart(2, '0')} / {String(SIMILIPAL_SLIDES.length).padStart(2, '0')}
-          </span>
-          <div className="w-px h-4 bg-forest-800" />
-          <button
-            type="button"
-            onClick={() => setIsPlaying(!isPlaying)}
-            className="p-1.5 rounded-full hover:bg-forest-800 text-cream-200 transition-colors touch-manipulation active:scale-95"
-            aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
-            title={isPlaying ? 'Pause' : 'Play'}
-          >
-            {isPlaying ? <Pause className="w-4 h-4 text-forest-400" /> : <Play className="w-4 h-4 text-forest-400" />}
-          </button>
-          <button
-            type="button"
-            onClick={() => setIsLightboxOpen(true)}
-            className="p-1.5 rounded-full hover:bg-forest-800 text-cream-200 transition-colors touch-manipulation active:scale-95"
-            aria-label="View Fullscreen"
-            title="View Fullscreen"
-          >
-            <Maximize2 className="w-4 h-4 text-forest-400" />
-          </button>
-        </div>
-      </div>
-
       {/* Main Slideshow Card */}
-      <div className="relative rounded-3xl overflow-hidden bg-[#0a1f13] border border-forest-700/50 shadow-2xl group">
+      <div 
+        onClick={() => setIsLightboxOpen(true)}
+        className="relative rounded-3xl overflow-hidden bg-[#0a1f13] border border-forest-700/50 shadow-2xl group cursor-pointer"
+        title="Click to view full screen"
+      >
         <div className="relative aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] w-full overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.img
@@ -201,7 +162,10 @@ export default function SimilipalCardSlideshow() {
           {/* Navigation Arrows */}
           <button
             type="button"
-            onClick={handlePrev}
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrev();
+            }}
             className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 p-2.5 sm:p-3.5 rounded-full bg-black/50 hover:bg-forest-600/80 text-white border border-white/10 backdrop-blur-md transition-all touch-manipulation active:scale-90 z-20 group/btn"
             aria-label="Previous Slide"
           >
@@ -209,7 +173,10 @@ export default function SimilipalCardSlideshow() {
           </button>
           <button
             type="button"
-            onClick={handleNext}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNext();
+            }}
             className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 p-2.5 sm:p-3.5 rounded-full bg-black/50 hover:bg-forest-600/80 text-white border border-white/10 backdrop-blur-md transition-all touch-manipulation active:scale-90 z-20 group/btn"
             aria-label="Next Slide"
           >
