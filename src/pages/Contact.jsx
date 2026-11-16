@@ -301,7 +301,7 @@ export default function Contact() {
                   <div>
                     <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-cream-400/70 block">Phone & WhatsApp</span>
                     <p className="text-xs sm:text-sm font-medium text-cream-100 mt-0.5">
-                      +91 94370 12890 / +91 (06792) 252 573
+                      +91 94372 66828 / +91 80188 68898
                     </p>
                     <p className="text-[11px] text-forest-400 mt-0.5">
                       Mon - Sun: 7:00 AM – 9:00 PM IST
@@ -316,10 +316,10 @@ export default function Contact() {
                   <div>
                     <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-cream-400/70 block">Email Inquiries</span>
                     <p className="text-xs sm:text-sm font-medium text-cream-100 mt-0.5">
-                      info@odishatourism-similipal.in
+                      wajidhossain828@gmail.com
                     </p>
                     <p className="text-[11px] text-cream-400/80 mt-0.5">
-                      safaris@odishatourism-similipal.in
+                      Direct WhatsApp & Booking Support
                     </p>
                   </div>
                 </div>

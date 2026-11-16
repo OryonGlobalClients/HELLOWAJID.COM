@@ -1,96 +1,126 @@
+export const SIMILIPAL_RATE_CHART = [
+  { nos: 2, label: '2 Nos', p1n2d: '₹6,500', p2n3d: '₹10,500', p3n4d: '₹15,300' },
+  { nos: 4, label: '4 Nos', p1n2d: '₹4,800', p2n3d: '₹8,500', p3n4d: '₹12,500' },
+  { nos: 6, label: '6 Nos', p1n2d: '₹4,200', p2n3d: '₹7,800', p3n4d: '₹11,400' },
+  { nos: 8, label: '8 Nos', p1n2d: '₹4,000', p2n3d: '₹7,500', p3n4d: '₹10,800' },
+  { nos: 10, label: '10 Nos', p1n2d: '₹4,500', p2n3d: '₹8,000', p3n4d: '₹11,800' },
+  { nos: 12, label: '12 Nos', p1n2d: '₹4,200', p2n3d: '₹7,800', p3n4d: '₹11,400' },
+  { nos: 14, label: '14 Nos', p1n2d: '₹4,000', p2n3d: '₹7,500', p3n4d: '₹11,000' },
+  { nos: 16, label: '16 Nos', p1n2d: '₹4,000', p2n3d: '₹7,200', p3n4d: '₹10,800' },
+];
+
+export const TOUR_OPERATOR_INFO = {
+  company: 'HELLO TOUR & TRAVELS',
+  destination: 'SIMILIPAL TIGER RESERVE',
+  contacts: ['9437266828', '8018868898'],
+  email: 'wajidhossain828@gmail.com',
+  gstNote: 'PLUS 5 % GST',
+  extraPersonNote: 'Extra 1 Person – 1500/-',
+  guideNote: 'Guide Charges Extra',
+  nosNote: 'NOS refers to number of persons',
+};
+
 export const PACKAGES = [
   {
-    id: 'similipal-adventure',
-    title: 'Similipal Wilderness Adventure',
-    duration: '2 Days / 1 Night',
+    id: 'similipal-1n2d',
+    title: 'Similipal Tiger Reserve Tour (1 Night 2 Days)',
+    duration: '1 Night / 2 Days',
+    durationKey: '1n2d',
     badge: 'Popular Weekend Trip',
-    price: '₹7,499',
-    perPerson: 'per person',
+    price: '₹4,000',
+    maxPrice: '₹6,500',
+    perPerson: 'per head onwards (+ 5% GST)',
     image: '/images/destinations/similipal.jpg',
-    description: 'An exhilarating introduction to Similipal National Park. Experience dense sal forests, Barehipani twin falls, and guided wildlife jeep safari.',
+    description: 'An exhilarating introduction to Similipal National Park. Experience dense sal forests, Barehipani twin falls, guided 4x4 wildlife safari, and eco-cottage stay inside the biosphere.',
+    rates: [
+      { persons: 2, price: '₹6,500' },
+      { persons: 4, price: '₹4,800' },
+      { persons: 6, price: '₹4,200' },
+      { persons: 8, price: '₹4,000' },
+      { persons: 10, price: '₹4,500' },
+      { persons: 12, price: '₹4,200' },
+      { persons: 14, price: '₹4,000' },
+      { persons: 16, price: '₹4,000' }
+    ],
     highlights: [
-      'Core forest 4x4 open gypsy safari',
-      'Barehipani & Joranda waterfall viewpoints',
-      'Eco-cottage stay inside biosphere sanctuary',
+      'Core forest open-top 4x4 Gypsy safari drive',
+      'Barehipani (399m) & Joranda (181m) waterfalls',
+      'Forest eco-cottage stay inside biosphere sanctuary',
       'All meals featuring authentic tribal Odia cuisine',
-      'Forest department registered naturalist guide'
+      'Forest entry permits & toll clearances managed'
     ],
     itinerary: [
-      { day: 'Day 1', plan: 'Entry from Pithabata gate, check-in to forest eco-cottage, afternoon safari, visit Barehipani Waterfall.' },
-      { day: 'Day 2', plan: 'Early morning birding walk, Joranda Falls visit, Chahala salt-lick wildlife sighting, return departure.' }
+      { day: 'Day 1', plan: 'Entry from Pithabata/Jashipur gate, check-in to forest eco-cottage, afternoon jungle tracking safari, visit Barehipani Waterfall.' },
+      { day: 'Day 2', plan: 'Early morning birding walk, Joranda Falls viewpoint, Chahala salt-lick wildlife sighting, return departure.' }
     ]
   },
   {
-    id: 'similipal-nature-explorer',
-    title: 'Similipal Nature & Wildlife Explorer',
-    duration: '3 Days / 2 Nights',
+    id: 'similipal-2n3d',
+    title: 'Similipal Tiger Reserve Tour (2 Nights 3 Days)',
+    duration: '2 Nights / 3 Days',
+    durationKey: '2n3d',
     badge: 'Best Wildlife Safari',
-    price: '₹12,999',
-    perPerson: 'per person',
+    price: '₹7,200',
+    maxPrice: '₹10,500',
+    perPerson: 'per head onwards (+ 5% GST)',
     image: '/images/gallery/gallery-tiger.jpg',
-    description: 'The definitive deep-forest expedition covering Similipal’s core trails, tiger territory, orchid sanctuaries, and remote waterfalls.',
+    description: 'The definitive deep-forest expedition covering Similipal’s core trails, tiger territory, orchid sanctuaries, pine valleys, and remote waterfalls.',
+    rates: [
+      { persons: 2, price: '₹10,500' },
+      { persons: 4, price: '₹8,500' },
+      { persons: 6, price: '₹7,800' },
+      { persons: 8, price: '₹7,500' },
+      { persons: 10, price: '₹8,000' },
+      { persons: 12, price: '₹7,800' },
+      { persons: 14, price: '₹7,500' },
+      { persons: 16, price: '₹7,200' }
+    ],
     highlights: [
-      'Two full-day 4x4 jungle tracking drives',
-      'Exclusive sunrise safari at Chahala meadows',
-      'Visit to Gurguria orchidarium & herbal garden',
+      'Two full-day 4x4 jungle tracking safaris in core tiger zone',
+      'Exclusive sunrise safari at Chahala meadow & observation tower',
+      'Visit to Gurguria orchidarium, herbal garden & pine valley',
       'Night stargazing amidst untouched sal canopies',
-      'Private bonfire & Odia tribal folk music evening'
+      'Private bonfire & authentic Odia tribal cuisine'
     ],
     itinerary: [
-      { day: 'Day 1', plan: 'Arrival in Baripada, transfer to Jamuani eco-resort, sunset nature trail walk.' },
-      { day: 'Day 2', plan: 'Full day safari: Chahala wildlife post, Barehipani waterfalls, Joranda plunge pool viewpoint.' },
-      { day: 'Day 3', plan: 'Morning visit to Gurguria pine forest & orchidarium, souvenir shopping, departure.' }
+      { day: 'Day 1', plan: 'Arrival in Baripada/Jashipur, transfer to Jamuani/Gurguria eco-resort, sunset nature trail walk, tribal dinner.' },
+      { day: 'Day 2', plan: 'Full day safari: Chahala wildlife post, Barehipani waterfalls, Joranda plunge pool viewpoint, campfire evening.' },
+      { day: 'Day 3', plan: 'Morning visit to Gurguria pine forest & orchidarium with 90+ orchid species, souvenir stop, return departure.' }
     ]
   },
   {
-    id: 'odisha-nature-tour',
-    title: 'Odisha Natural Wonders Tour',
-    duration: '5 Days / 4 Nights',
-    badge: 'Lakes, Hills & Wildlife',
-    price: '₹21,500',
-    perPerson: 'per person',
-    image: '/images/destinations/chilika.jpg',
-    description: 'A harmonious blend of Similipal tiger reserve, Asia\'s largest brackish lagoon Chilika with dolphins, and the rolling green hills of Daringbadi.',
+    id: 'similipal-3n4d',
+    title: 'Similipal Tiger Reserve Tour (3 Nights 4 Days)',
+    duration: '3 Nights / 4 Days',
+    durationKey: '3n4d',
+    badge: 'Complete Deep Wilderness',
+    price: '₹10,800',
+    maxPrice: '₹15,300',
+    perPerson: 'per head onwards (+ 5% GST)',
+    image: '/images/destinations/barehipani.jpg',
+    description: 'Comprehensive 4-day grand circuit covering the entire Mayurbhanj biosphere reserve: Devasthali grasslands, waterfalls, Ramatirtha crocodile sanctuary, and remote tribal valleys.',
+    rates: [
+      { persons: 2, price: '₹15,300' },
+      { persons: 4, price: '₹12,500' },
+      { persons: 6, price: '₹11,400' },
+      { persons: 8, price: '₹10,800' },
+      { persons: 10, price: '₹11,800' },
+      { persons: 12, price: '₹11,400' },
+      { persons: 14, price: '₹11,000' },
+      { persons: 16, price: '₹10,800' }
+    ],
     highlights: [
-      'Similipal tiger safari & waterfalls',
-      'Chilika Lake private boat cruise to Satapada dolphin point',
-      'Daringbadi coffee plantations & pine valleys',
-      'Luxury air-conditioned private SUV throughout',
-      'Curated stays at premier eco-resorts'
+      'Three extensive open 4x4 Gypsy jungle safaris across core zones',
+      'Complete coverage of Barehipani, Joranda, Chahala & Devasthali',
+      'Visit to Ramatirtha Mugger Crocodile Sanctuary & Khairi riverbank',
+      'Stargazing in pristine zero-light-pollution forest canopy',
+      '3 Nights eco-camp stay at Jamuani, Barehipani or Gurguria with all meals'
     ],
     itinerary: [
-      { day: 'Day 1', plan: 'Bhubaneswar arrival, scenic drive to Similipal National Park, eco-resort check-in.' },
-      { day: 'Day 2', plan: 'Similipal core safari, Barehipani falls, journey to Daringbadi highlands.' },
-      { day: 'Day 3', plan: 'Daringbadi pine forest, coffee gardens, Midubanda cascade, relax in valley.' },
-      { day: 'Day 4', plan: 'Drive to Chilika Lagoon (Satapada), spot Irrawaddy dolphins, sunset boat cruise.' },
-      { day: 'Day 5', plan: 'Morning beach walk, scenic transfer back to Bhubaneswar airport/station.' }
-    ]
-  },
-  {
-    id: 'odisha-complete-explorer',
-    title: 'Odisha Complete Explorer Grand Circuit',
-    duration: '7 Days / 6 Nights',
-    badge: 'Signature Grand Expedition',
-    price: '₹34,999',
-    perPerson: 'per person',
-    image: '/images/destinations/konark.jpg',
-    description: 'The ultimate panoramic odyssey spanning Similipal’s deep wilderness, UNESCO Konark Sun Temple, sacred Puri shores, and the majestic Deomali mountain peaks.',
-    highlights: [
-      'Comprehensive Odisha Grand Tour covering Forest, Sea, Hills & Heritage',
-      'Similipal National Park 2-day jungle experience',
-      'UNESCO Konark Sun Temple private guided architectural tour',
-      'Puri Golden Beach sunrise & Jagannath heritage stroll',
-      'Deomali peak trek & Koraput tribal highland discovery',
-      'All entry permits, 4-star boutique eco-resorts & premium transport'
-    ],
-    itinerary: [
-      { day: 'Day 1', plan: 'Bhubaneswar arrival: Dhauli Stupa & Udayagiri Caves, evening travel to Similipal.' },
-      { day: 'Day 2', plan: 'Similipal jungle safari, waterfalls, night stay in forest canopy lodge.' },
-      { day: 'Day 3', plan: 'Transfer to Konark Sun Temple, Chandrabhaga beach sunset, transfer to Puri.' },
-      { day: 'Day 4', plan: 'Puri Golden Beach relaxation, heritage tour, afternoon boat ride on Chilika.' },
-      { day: 'Day 5', plan: 'Scenic highway transit to the Eastern Ghats of Koraput.' },
-      { day: 'Day 6', plan: 'Ascend Deomali peak for panoramic cloud views, tribal valley culture walk.' },
-      { day: 'Day 7', plan: 'Return transfer to Bhubaneswar/Visakhapatnam with cherished memories.' }
+      { day: 'Day 1', plan: 'Arrival and entry into Similipal. Check-in to forest cottage, afternoon acclimatization nature walk along river bed.' },
+      { day: 'Day 2', plan: 'Full-day core safari: Chahala meadows, salt lick tiger tracking, and Barehipani 399m cascading falls.' },
+      { day: 'Day 3', plan: 'Explore Joranda Falls canyon gorge, Gurguria pine forest, orchidarium, and evening tribal folklore.' },
+      { day: 'Day 4', plan: 'Morning wildlife drive, visit Ramatirtha crocodile breeding project, departure with unforgettable memories.' }
     ]
   }
 ];

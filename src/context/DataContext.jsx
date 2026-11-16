@@ -6,7 +6,7 @@ const DataContext = createContext(null);
 
 const STORAGE_KEYS = {
   GALLERY: 'ot_custom_gallery_v1',
-  PACKAGES: 'ot_custom_packages_v1',
+  PACKAGES: 'ot_custom_packages_v2',
 };
 
 export function DataProvider({ children }) {

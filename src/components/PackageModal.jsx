@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Clock, Check, ShieldCheck, ArrowRight, Sparkles } from 'lucide-react';
+import { X, Clock, Check, ShieldCheck, ArrowRight, Sparkles, Users, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function PackageModal({ pkg, onClose }) {
@@ -74,6 +74,37 @@ export default function PackageModal({ pkg, onClose }) {
             <p className="text-xs sm:text-sm text-cream-200/90 leading-relaxed font-light">
               {pkg.description}
             </p>
+
+            {/* Group Pricing Table (Rates per Head according to chart) */}
+            {pkg.rates && pkg.rates.length > 0 && (
+              <div className="p-4 rounded-2xl bg-forest-950/70 border border-forest-800/80">
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-forest-300 flex items-center gap-1.5">
+                    <Users className="w-3.5 h-3.5 text-forest-400" />
+                    <span>Rate Chart per Person (NOS = Group Size)</span>
+                  </h4>
+                  <span className="text-[10px] text-amber-300 font-semibold px-2 py-0.5 rounded bg-forest-900 border border-forest-700/60">
+                    + 5% GST
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  {pkg.rates.map((r) => (
+                    <div key={r.persons} className="p-2.5 rounded-xl bg-[#08150d] border border-forest-800/60 text-center">
+                      <span className="text-[11px] font-bold text-cream-400 block">{r.persons} Persons</span>
+                      <span className="font-mono text-sm sm:text-base font-bold text-forest-300">{r.price}</span>
+                      <span className="text-[10px] text-cream-400/70 block">/ head</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-3 pt-2.5 border-t border-forest-900 flex flex-wrap items-center justify-between gap-2 text-[11px] text-cream-300/80">
+                  <span>• Extra 1 Person – <strong className="text-forest-200">₹1,500/-</strong></span>
+                  <span>• Guide Charges Extra</span>
+                  <span>• Inquiries: <a href="tel:+919437266828" className="text-forest-300 underline font-mono">9437266828</a></span>
+                </div>
+              </div>
+            )}
 
             {/* Highlights */}
             <div>

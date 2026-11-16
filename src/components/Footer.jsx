@@ -143,11 +143,11 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-forest-400 shrink-0" />
-                <a href="tel:+919437012890" className="hover:text-white">+91 94370 12890 / 06792-252573</a>
+                <a href="tel:+919437266828" className="hover:text-white">+91 94372 66828 / +91 80188 68898</a>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-forest-400 shrink-0" />
-                <span>info@odishatourism-similipal.in</span>
+                <a href="mailto:wajidhossain828@gmail.com" className="hover:text-white">wajidhossain828@gmail.com</a>
               </p>
             </div>
 

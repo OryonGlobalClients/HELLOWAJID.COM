@@ -10,6 +10,7 @@ import { PACKAGES } from '../data/packages';
 import PackageModal from '../components/PackageModal';
 import SimilipalCardSlideshow from '../components/SimilipalCardSlideshow';
 import SimilipalInfoTab from '../components/SimilipalInfoTab';
+import SimilipalTariffTable from '../components/SimilipalTariffTable';
 
 export default function SimilipalSafaris() {
   const [selectedPackage, setSelectedPackage] = useState(null);
@@ -65,19 +66,19 @@ export default function SimilipalSafaris() {
       categoryLabel: 'Eco-Stay & Safari',
       duration: '2 Days / 1 Night',
       timing: 'Check-in 10:00 AM (Day 1) to Departure 4:00 PM (Day 2)',
-      capacity: 'Couples & Family Groups',
-      price: '₹7,499',
-      priceUnit: 'per person',
+      capacity: '2 - 16 Persons (Group Tiers)',
+      price: '₹4,000',
+      priceUnit: 'per head onwards (+ 5% GST)',
       image: '/images/hero/hero-melanistic-tiger.jpg',
       badge: 'Signature Tour',
-      overview: 'Complete wilderness experience including night stay in authentic forest rest house cottages inside the biosphere, two safari drives, and tribal cuisine.',
+      overview: 'Complete wilderness experience including night stay in authentic forest rest house cottages inside the biosphere, 4x4 Gypsy safari drive, and tribal cuisine.',
       highlights: [
         'Eco-cottage stay inside biosphere at Jamuani / Gurguria',
-        'Two core jungle tracking safaris with native naturalist',
-        'All authentic Odia tribal meals & evening bonfire folklore',
-        'Exclusive early-dawn elephant herd tracking drive'
+        'Core jungle tracking safaris with native Mayurbhanj naturalist',
+        'All authentic Odia tribal meals included',
+        'Barehipani & Joranda waterfalls visit'
       ],
-      packageRef: 'similipal-adventure'
+      packageRef: 'similipal-1n2d'
     },
     {
       id: 'nature-explorer-3d2n',
@@ -86,9 +87,9 @@ export default function SimilipalSafaris() {
       categoryLabel: 'Grand Safari',
       duration: '3 Days / 2 Nights',
       timing: '3 Full Days Immersive Wilderness Circuit',
-      capacity: 'Couples, Families & Photographers',
-      price: '₹12,999',
-      priceUnit: 'per person',
+      capacity: '2 - 16 Persons (Group Tiers)',
+      price: '₹7,200',
+      priceUnit: 'per head onwards (+ 5% GST)',
       image: '/images/hero/hero-similipal.jpg',
       badge: 'Deep Explorer',
       overview: 'The definitive deep-forest expedition covering Similipal’s core trails, tiger territory, orchid sanctuaries, pine groves, and remote waterfalls.',
@@ -98,7 +99,28 @@ export default function SimilipalSafaris() {
         'Visit to Gurguria orchidarium, herbal garden & pine valleys',
         'Night stargazing amidst untouched sal canopies & tribal folk evening'
       ],
-      packageRef: 'similipal-nature-explorer'
+      packageRef: 'similipal-2n3d'
+    },
+    {
+      id: 'complete-circuit-4d3n',
+      title: 'Similipal 4D/3N Complete Sanctuary Circuit',
+      category: 'stay',
+      categoryLabel: 'Grand Circuit',
+      duration: '4 Days / 3 Nights',
+      timing: '4 Full Days Complete Wilderness Immersion',
+      capacity: '2 - 16 Persons (Group Tiers)',
+      price: '₹10,800',
+      priceUnit: 'per head onwards (+ 5% GST)',
+      image: '/images/destinations/barehipani.jpg',
+      badge: 'Full Reserve Tour',
+      overview: 'Comprehensive 4-day grand circuit covering the entire Mayurbhanj biosphere reserve: Devasthali grasslands, waterfalls, Ramatirtha crocodile sanctuary, and remote tribal valleys.',
+      highlights: [
+        'Three extensive open 4x4 Gypsy jungle safaris across core zones',
+        'Complete coverage of Barehipani, Joranda, Chahala & Gurguria',
+        'Visit to Ramatirtha Mugger Crocodile Sanctuary & Khairi river',
+        '3 Nights forest eco-cottage stay with all tribal meals included'
+      ],
+      packageRef: 'similipal-3n4d'
     }
   ];
 
@@ -270,6 +292,13 @@ export default function SimilipalSafaris() {
           ))}
         </div>
       </div>
+
+      {/* =========================================
+          OFFICIAL TOUR PACKAGES TARIFF CHART
+      ========================================= */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24">
+        <SimilipalTariffTable />
+      </section>
 
       {/* =========================================
           KEY SAFARI ZONES

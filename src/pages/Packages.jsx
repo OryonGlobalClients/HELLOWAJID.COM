@@ -4,6 +4,7 @@ import { Clock, ShieldCheck, Sparkles, ArrowRight, Eye, Check, Star } from 'luci
 import { Link } from 'react-router-dom';
 import { useData } from '../context/DataContext';
 import PackageModal from '../components/PackageModal';
+import SimilipalTariffTable from '../components/SimilipalTariffTable';
 
 export default function Packages() {
   const { packages } = useData();
@@ -143,6 +144,11 @@ export default function Packages() {
             </motion.div>
           ))}
         </div>
+      </div>
+
+      {/* Official Tariff Chart matching Hello Tour & Travels Chart */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14 sm:mb-20">
+        <SimilipalTariffTable />
       </div>
 
       {/* Trust & Guarantee Banner */}
