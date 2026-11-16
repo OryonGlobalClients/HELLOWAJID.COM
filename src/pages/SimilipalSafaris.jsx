@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { PACKAGES } from '../data/packages';
 import PackageModal from '../components/PackageModal';
 import SimilipalCardSlideshow from '../components/SimilipalCardSlideshow';
+import SimilipalInfoTab from '../components/SimilipalInfoTab';
 
 export default function SimilipalSafaris() {
   const [selectedPackage, setSelectedPackage] = useState(null);
@@ -134,6 +135,7 @@ export default function SimilipalSafaris() {
       ========================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-20">
         <SimilipalCardSlideshow />
+        <SimilipalInfoTab onSelectCategory={setActiveTab} />
       </section>
 
       {/* =========================================
