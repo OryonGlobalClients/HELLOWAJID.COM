@@ -6,6 +6,9 @@ export default function Lightbox({ items, currentIndex, onClose, onPrev, onNext 
   if (currentIndex === null || !items || !items[currentIndex]) return null;
 
   const currentItem = items[currentIndex];
+  const imageSrc = currentItem.src || currentItem.image || currentItem.url;
+  const itemKey = currentItem.id ?? currentIndex;
+  const description = currentItem.description || currentItem.caption || currentItem.desc;
 
   // Keyboard navigation
   useEffect(() => {
@@ -78,7 +81,7 @@ export default function Lightbox({ items, currentIndex, onClose, onPrev, onNext 
 
           {/* Active Image */}
           <motion.div
-            key={currentItem.id}
+            key={itemKey}
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.96 }}
@@ -86,8 +89,8 @@ export default function Lightbox({ items, currentIndex, onClose, onPrev, onNext 
             className="relative rounded-2xl overflow-hidden shadow-2xl max-h-[60vh] sm:max-h-[70vh] border border-forest-800/50 flex items-center justify-center"
           >
             <img
-              src={currentItem.src}
-              alt={currentItem.title}
+              src={imageSrc}
+              alt={currentItem.title || 'Odisha Gallery Image'}
               className="max-h-[60vh] sm:max-h-[70vh] w-auto max-w-full object-contain mx-auto"
             />
           </motion.div>
@@ -105,9 +108,9 @@ export default function Lightbox({ items, currentIndex, onClose, onPrev, onNext 
             <MapPin className="w-3.5 h-3.5" />
             <span>{currentItem.location}</span>
           </p>
-          {currentItem.description && (
+          {description && (
             <p className="hidden sm:block text-xs text-cream-200/80 mt-1 font-light">
-              {currentItem.description}
+              {description}
             </p>
           )}
         </div>

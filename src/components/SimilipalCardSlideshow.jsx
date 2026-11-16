@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  ChevronLeft, ChevronRight, Play, Pause, MapPin, 
-  Sparkles, Maximize2, Trees
+  ChevronLeft, ChevronRight, Play, Pause, 
+  Maximize2, Trees
 } from 'lucide-react';
 import Lightbox from './Lightbox';
 
@@ -131,9 +131,12 @@ export default function SimilipalCardSlideshow() {
 
   // Adapt slides for Lightbox component
   const lightboxItems = SIMILIPAL_SLIDES.map((s) => ({
+    id: s.id,
     title: s.title,
     caption: s.desc,
+    description: s.desc,
     location: s.location,
+    src: s.image,
     image: s.image,
   }));
 
@@ -195,10 +198,6 @@ export default function SimilipalCardSlideshow() {
             />
           </AnimatePresence>
 
-          {/* Vignette Gradients */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/30 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60 pointer-events-none" />
-
           {/* Navigation Arrows */}
           <button
             type="button"
@@ -216,29 +215,6 @@ export default function SimilipalCardSlideshow() {
           >
             <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover/btn:translate-x-0.5 transition-transform" />
           </button>
-
-          {/* Slide Caption Overlay */}
-          <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 lg:p-10 z-10 pointer-events-auto">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 backdrop-blur-md border border-forest-500/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-forest-300 mb-2 sm:mb-3">
-                <Sparkles className="w-3.5 h-3.5 text-forest-400" />
-                <span>{currentSlide.category}</span>
-              </div>
-
-              <h3 className="font-serif text-xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 drop-shadow-lg leading-tight">
-                {currentSlide.title}
-              </h3>
-
-              <div className="flex items-center gap-1.5 text-xs sm:text-sm text-forest-300 font-medium mb-3">
-                <MapPin className="w-3.5 h-3.5 text-forest-400" />
-                <span>{currentSlide.location}</span>
-              </div>
-
-              <p className="text-xs sm:text-sm text-cream-200/90 font-light leading-relaxed max-w-2xl drop-shadow line-clamp-2 sm:line-clamp-none">
-                {currentSlide.desc}
-              </p>
-            </div>
-          </div>
         </div>
       </div>
 
