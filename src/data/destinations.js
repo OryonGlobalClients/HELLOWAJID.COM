@@ -200,9 +200,9 @@ export const DESTINATIONS = [
     category: 'waterfalls',
     categoryLabel: 'Waterfalls',
     location: 'Kendujhar (Keonjhar), Odisha',
-    image: '/images/destinations/sanaghagara.jpg',
+    image: '/images/destinations/sanaghagara.png',
     gallery: [
-      '/images/destinations/sanaghagara.jpg'
+      '/images/destinations/sanaghagara.png'
     ],
     tagline: 'Picturesque Cascade Framed by Granite Formations',
     description: 'A peaceful, perennial waterfall flowing through rolling hilly terrain with dense forested slopes, ideal for family picnics and serene morning strolls.',
