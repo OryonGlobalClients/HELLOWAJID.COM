@@ -76,6 +76,64 @@ export const DESTINATIONS = [
     featured: false,
     rating: 4.7,
   },
+  {
+    id: 'ramatirtha-crocodile-sanctuary',
+    name: 'Ramatirtha Mugger Crocodile Sanctuary',
+    category: 'wildlife',
+    categoryLabel: 'Wildlife & Nature',
+    location: 'Jashipur, Mayurbhanj',
+    image: '/images/destinations/ramatirtha.jpg',
+    gallery: [
+      '/images/destinations/ramatirtha.jpg',
+      '/images/Similipal/repts.jpg'
+    ],
+    tagline: 'Perennial Riverbanks of the Endangered Mugger Crocodile',
+    description: 'Located at the confluence of the Khairi and Bhandan rivers near Jashipur at the entry gate of Similipal, Ramatirtha is an acclaimed captive breeding center for the endangered mugger crocodile surrounded by lush sal woodlands.',
+    highlights: ['Mugger crocodile breeding & conservation pool', 'Confluence of Khairi & Bhandan rivers', 'Picturesque eco-tourism complex & nature interpretation', 'Entry point for Similipal Tiger Reserve'],
+    bestTime: 'October to May',
+    nearestHub: 'Jashipur (2 km) / Baripada (95 km) / Balasore (150 km)',
+    featured: false,
+    rating: 4.8,
+  },
+  {
+    id: 'chahala-meadows',
+    name: 'Chahala Meadow & Wildlife Observation Point',
+    category: 'wildlife',
+    categoryLabel: 'Wildlife & Nature',
+    location: 'Core Similipal, Mayurbhanj',
+    image: '/images/destinations/chahala.jpg',
+    gallery: [
+      '/images/destinations/chahala.jpg',
+      '/images/Similipal/tiger-closeup.jpg',
+      '/images/Similipal/deer.jpg'
+    ],
+    tagline: 'Premier Salt-Lick Sighting Zone for Melanistic Tigers & Herds',
+    description: 'The historic royal hunting lodge and vast open grasslands of Chahala feature an artificial salt-lick that attracts wild Bengal and melanistic tigers, herds of spotted chital deer, barking deer, and wild boars under the canopy.',
+    highlights: ['World famous melanistic tiger sighting zone', 'Active forest department salt-lick observation tower', 'Herds of grazing Chital and Sambar deer', 'Heritage British forest rest house'],
+    bestTime: 'November to June',
+    nearestHub: 'Jashipur (45 km) / Baripada (85 km)',
+    featured: true,
+    rating: 4.9,
+  },
+  {
+    id: 'devasthali-elephant-corridor',
+    name: 'Devasthali Grasslands & Elephant Corridor',
+    category: 'wildlife',
+    categoryLabel: 'Wildlife & Nature',
+    location: 'Similipal Biosphere Reserve, Mayurbhanj',
+    image: '/images/destinations/devasthali.jpg',
+    gallery: [
+      '/images/destinations/devasthali.jpg',
+      '/images/Similipal/elephant-group.jpg'
+    ],
+    tagline: 'Pristine Savanna Meadows of Wild Asian Elephant Herds',
+    description: 'Deep inside the core zone of Similipal, Devasthali is an expansive savanna grassland surrounded by dense sal trees where wild Asian elephant matriarchs lead their herds across perennial natural springs and waterholes.',
+    highlights: ['Premier wild elephant foraging grounds', 'Rolling natural savanna grasslands', 'Zero light & sound pollution zone', 'Rich endemic birding habitat'],
+    bestTime: 'November to April',
+    nearestHub: 'Baripada (90 km) / Jashipur (65 km)',
+    featured: false,
+    rating: 4.9,
+  },
 
   // WATERFALLS
   {
@@ -95,6 +153,26 @@ export const DESTINATIONS = [
     bestTime: 'November to May',
     nearestHub: 'Baripada (85 km)',
     featured: true,
+    rating: 4.9,
+  },
+  {
+    id: 'barehipani-rainbow-canyon',
+    name: 'Barehipani Rainbow Canyon & Gorge',
+    category: 'waterfalls',
+    categoryLabel: 'Waterfalls',
+    location: 'Meghasani Peak, Similipal',
+    image: '/images/destinations/barehipani-rainbow.jpg',
+    gallery: [
+      '/images/destinations/barehipani-rainbow.jpg',
+      '/images/Similipal/barehipani-waterfall.jpg',
+      '/images/Similipal/barehipani-cliff.jpg'
+    ],
+    tagline: 'Dramatic Red Granite Cliffs with Perpetual Natural Rainbow Arc',
+    description: 'The sheer cliff canyon overlooking Barehipani waterfall creates an amphitheater of red volcanic stone and misty plunge pools, famous for casting brilliant natural rainbows when afternoon sunlight refracts through the 399-meter cascading spray.',
+    highlights: ['Vivid natural rainbow over 399-meter falls', 'Panoramic Meghasani mountain gorge overlook', 'Twin-tier Budhabalanga river plunge view', 'Deep canyon echo points'],
+    bestTime: 'October to May (Best rainbows between 1:00 PM – 4:00 PM)',
+    nearestHub: 'Baripada (85 km) / Jashipur (55 km)',
+    featured: false,
     rating: 4.9,
   },
   {
