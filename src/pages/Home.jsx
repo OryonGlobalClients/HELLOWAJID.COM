@@ -382,7 +382,7 @@ export default function Home() {
               to="/destinations"
               className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-forest-900/60 hover:bg-forest-800 border border-forest-700/50 text-xs font-semibold uppercase tracking-wider text-cream-100 transition-colors self-start sm:self-auto touch-manipulation"
             >
-              <span>View All 18 Destinations</span>
+              <span>View All {DESTINATIONS.length} Destinations</span>
               <ChevronRight className="w-4 h-4" />
             </Link>
           </div>

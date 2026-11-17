@@ -26,9 +26,9 @@ export const DESTINATIONS = [
     category: 'wildlife',
     categoryLabel: 'Wildlife & Nature',
     location: 'Angul, Odisha',
-    image: '/images/destinations/satkosia.jpg',
+    image: '/images/destinations/satkosia.png',
     gallery: [
-      '/images/destinations/satkosia.jpg',
+      '/images/destinations/satkosia.png',
       '/images/gallery/gallery-satkosia.jpg'
     ],
     tagline: 'Where the Mahanadi River Cuts Through the Eastern Ghats',
@@ -45,9 +45,9 @@ export const DESTINATIONS = [
     category: 'wildlife',
     categoryLabel: 'Wildlife & Nature',
     location: 'Kendrapara, Odisha',
-    image: '/images/destinations/bhitarkanika.jpg',
+    image: '/images/destinations/bhitarkanika.png',
     gallery: [
-      '/images/destinations/bhitarkanika.jpg',
+      '/images/destinations/bhitarkanika.png',
       '/images/gallery/gallery-crocodile.jpg'
     ],
     tagline: 'India\'s Amazon – The Realm of Giant Saltwater Crocodiles',
@@ -64,9 +64,9 @@ export const DESTINATIONS = [
     category: 'wildlife',
     categoryLabel: 'Wildlife & Nature',
     location: 'Sambalpur, Odisha',
-    image: '/images/destinations/debrigarh.jpg',
+    image: '/images/destinations/debrigarh.png',
     gallery: [
-      '/images/destinations/debrigarh.jpg'
+      '/images/destinations/debrigarh.png'
     ],
     tagline: 'Lakeside Wilderness by the Mighty Hirakud Dam',
     description: 'Perched on the rim of the vast Hirakud reservoir, Debrigarh is renowned for frequent sightings of leopards, Indian bison (gaur), chousingha, and migratory waterfowl.',
@@ -103,9 +103,9 @@ export const DESTINATIONS = [
     category: 'waterfalls',
     categoryLabel: 'Waterfalls',
     location: 'Similipal, Mayurbhanj',
-    image: '/images/destinations/joranda.jpg',
+    image: '/images/destinations/joranda.png',
     gallery: [
-      '/images/destinations/joranda.jpg',
+      '/images/destinations/joranda.png',
       '/images/gallery/gallery-joranda.jpg'
     ],
     tagline: 'A Pristine 181-Meter Single Drop Through Ancient Woods',
@@ -140,9 +140,9 @@ export const DESTINATIONS = [
     category: 'waterfalls',
     categoryLabel: 'Waterfalls',
     location: 'Sundergarh, Odisha',
-    image: '/images/destinations/khandadhar.jpg',
+    image: '/images/destinations/khandadhar.png',
     gallery: [
-      '/images/destinations/khandadhar.jpg',
+      '/images/destinations/khandadhar.png',
       '/images/gallery/gallery-khandadhar.jpg'
     ],
     tagline: 'The Shimmering Sword Waterfall of Northern Odisha',
@@ -161,9 +161,9 @@ export const DESTINATIONS = [
     category: 'beaches',
     categoryLabel: 'Beaches & Lakes',
     location: 'Puri, Odisha',
-    image: '/images/destinations/puri-beach.jpg',
+    image: '/images/destinations/puri-beach.png',
     gallery: [
-      '/images/destinations/puri-beach.jpg',
+      '/images/destinations/puri-beach.png',
       '/images/gallery/gallery-puri.jpg'
     ],
     tagline: 'Blue Flag Certified Golden Coast Along Bay of Bengal',
@@ -198,9 +198,9 @@ export const DESTINATIONS = [
     category: 'beaches',
     categoryLabel: 'Beaches & Lakes',
     location: 'Ganjam, Odisha',
-    image: '/images/destinations/gopalpur.jpg',
+    image: '/images/destinations/gopalpur.png',
     gallery: [
-      '/images/destinations/gopalpur.jpg',
+      '/images/destinations/gopalpur.png',
       '/images/gallery/gallery-gopalpur.jpg'
     ],
     tagline: 'Historic Port Town with Vintage Lighthouse & Peaceful Waves',
@@ -217,9 +217,9 @@ export const DESTINATIONS = [
     category: 'beaches',
     categoryLabel: 'Beaches & Lakes',
     location: 'Puri & Ganjam, Odisha',
-    image: '/images/destinations/chilika.jpg',
+    image: '/images/destinations/chilika.png',
     gallery: [
-      '/images/destinations/chilika.jpg',
+      '/images/destinations/chilika.png',
       '/images/gallery/gallery-chilika.jpg'
     ],
     tagline: 'Asia\'s Largest Brackish Water Lagoon & Irrawaddy Dolphin Haven',
@@ -238,9 +238,9 @@ export const DESTINATIONS = [
     category: 'hills',
     categoryLabel: 'Hills & Adventure',
     location: 'Koraput, Odisha',
-    image: '/images/destinations/deomali.jpg',
+    image: '/images/destinations/deomali.png',
     gallery: [
-      '/images/destinations/deomali.jpg',
+      '/images/destinations/deomali.png',
       '/images/gallery/gallery-deomali.jpg'
     ],
     tagline: 'Odisha\'s Highest Peak at 1,672 Meters Above Sea Level',
@@ -257,9 +257,9 @@ export const DESTINATIONS = [
     category: 'hills',
     categoryLabel: 'Hills & Adventure',
     location: 'Kandhamal, Odisha',
-    image: '/images/destinations/daringbadi.jpg',
+    image: '/images/destinations/daringbadi.png',
     gallery: [
-      '/images/destinations/daringbadi.jpg',
+      '/images/destinations/daringbadi.png',
       '/images/gallery/gallery-daringbadi.jpg'
     ],
     tagline: 'The Kashmir of Odisha – Pine Forests & Misty Valleys',
@@ -276,9 +276,9 @@ export const DESTINATIONS = [
     category: 'hills',
     categoryLabel: 'Hills & Adventure',
     location: 'Gajapati, Odisha',
-    image: '/images/destinations/mahendragiri.jpg',
+    image: '/images/destinations/mahendragiri.png',
     gallery: [
-      '/images/destinations/mahendragiri.jpg'
+      '/images/destinations/mahendragiri.png'
     ],
     tagline: 'Mythological Mountain Peak of Parashurama & Pandavas',
     description: 'At 1,501 meters, Mahendragiri is steeped in the Ramayana and Mahabharata epics, adorned with monolithic stone temples and rare sub-tropical biodiversity.',
@@ -296,9 +296,9 @@ export const DESTINATIONS = [
     category: 'culture',
     categoryLabel: 'Culture & Heritage',
     location: 'Konark, Puri District',
-    image: '/images/destinations/konark.jpg',
+    image: '/images/destinations/konark.png',
     gallery: [
-      '/images/destinations/konark.jpg',
+      '/images/destinations/konark.png',
       '/images/gallery/gallery-konark.jpg'
     ],
     tagline: 'UNESCO World Heritage Architectural Wonder of the 13th Century',
@@ -315,9 +315,9 @@ export const DESTINATIONS = [
     category: 'culture',
     categoryLabel: 'Culture & Heritage',
     location: 'Puri, Odisha',
-    image: '/images/destinations/jagannath.jpg',
+    image: '/images/destinations/jagannath.png',
     gallery: [
-      '/images/destinations/jagannath.jpg',
+      '/images/destinations/jagannath.png',
       '/images/gallery/gallery-jagannath.jpg'
     ],
     tagline: 'Sacred Dhama of Lord Jagannath & The Great Ratha Yatra',
@@ -334,9 +334,9 @@ export const DESTINATIONS = [
     category: 'culture',
     categoryLabel: 'Culture & Heritage',
     location: 'Bhubaneswar, Odisha',
-    image: '/images/destinations/udayagiri.jpg',
+    image: '/images/destinations/udayagiri.png',
     gallery: [
-      '/images/destinations/udayagiri.jpg',
+      '/images/destinations/udayagiri.png',
       '/images/gallery/gallery-udayagiri.jpg'
     ],
     tagline: 'Rock-Cut Monastic Caverns of Emperor Kharavela (2nd Century BCE)',
@@ -353,9 +353,9 @@ export const DESTINATIONS = [
     category: 'culture',
     categoryLabel: 'Culture & Heritage',
     location: 'Dhauli, Bhubaneswar',
-    image: '/images/destinations/dhauli.jpg',
+    image: '/images/destinations/dhauli.png',
     gallery: [
-      '/images/destinations/dhauli.jpg'
+      '/images/destinations/dhauli.png'
     ],
     tagline: 'Monument of Peace Where Emperor Ashoka Embraced Buddhism',
     description: 'Overlooking the Daya River where the historic Kalinga War ended, this gleaming white Peace Pagoda stands alongside Ashokan rock edicts from 261 BCE.',
@@ -364,6 +364,24 @@ export const DESTINATIONS = [
     nearestHub: 'Bhubaneswar (10 km)',
     featured: false,
     rating: 4.7,
+  },
+  {
+    id: 'lingaraj-temple',
+    name: 'Lingaraj Temple',
+    category: 'culture',
+    categoryLabel: 'Culture & Heritage',
+    location: 'Bhubaneswar, Odisha',
+    image: '/images/destinations/lingaraj.png',
+    gallery: [
+      '/images/destinations/lingaraj.png'
+    ],
+    tagline: 'Magnificent 11th-Century Kalinga Temple Dedicated to Lord Shiva',
+    description: 'The largest temple in Bhubaneswar, Lingaraj stands as the quintessence of Kalinga architecture with its towering 55-meter deula spire, intricate stone friezes, and sacred Bindusagar lake.',
+    highlights: ['55-meter towering stone spire', '1,000+ years of living spiritual heritage', 'Sacred Bindusagar tank', 'Masterpiece of Kalinga architecture'],
+    bestTime: 'October to March',
+    nearestHub: 'Bhubaneswar Airport (4 km) / Railway Station (5 km)',
+    featured: false,
+    rating: 4.9,
   }
 ];
 
