@@ -63,7 +63,7 @@ export const PACKAGES = [
     price: '₹7,200',
     maxPrice: '₹10,500',
     perPerson: 'per head onwards (+ 5% GST)',
-    image: '/images/gallery/gallery-tiger.jpg',
+    image: '/images/destinations/similipal.jpg',
     description: 'The definitive deep-forest expedition covering Similipal’s core trails, tiger territory, orchid sanctuaries, pine valleys, and remote waterfalls.',
     rates: [
       { persons: 2, price: '₹10,500' },

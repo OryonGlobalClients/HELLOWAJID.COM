@@ -27,7 +27,7 @@ export default function SimilipalSafaris() {
       capacity: 'Up to 6 Persons / Vehicle',
       price: '₹3,800',
       priceUnit: 'per vehicle',
-      image: '/images/gallery/gallery-tiger.jpg',
+      image: '/images/destinations/similipal.jpg',
       badge: 'Most Popular',
       overview: 'Rugged open-top 4x4 expedition through core sal trails, deep waterholes, and the famous Chahala salt-lick where melanistic tigers and leopards roam.',
       highlights: [
@@ -132,7 +132,7 @@ export default function SimilipalSafaris() {
     {
       name: 'Chahala Meadow & Salt-Lick',
       type: 'Core Wildlife Sanctuary',
-      image: '/images/gallery/gallery-tiger.jpg',
+      image: '/images/destinations/chahala.jpg',
       desc: 'Similipal’s premier wildlife sighting zone featuring the historic royal rest house and an expansive salt-lick frequented by Royal Bengal & rare melanistic tigers, wild elephants, and barking deer.'
     },
     {

@@ -1,37 +1,38 @@
 export const GALLERY_ITEMS = [
+  // WILDLIFE
   {
     id: 1,
     title: 'Royal Bengal Tiger in Similipal Meadows',
     category: 'wildlife',
     location: 'Similipal Tiger Reserve, Mayurbhanj',
-    src: '/images/gallery/gallery-tiger.jpg',
+    src: '/images/destinations/similipal.jpg',
     aspect: 'aspect-[4/3]',
-    description: 'The elusive apex predator roaming through the sal grasslands of Similipal National Park.'
+    description: 'The elusive apex predator roaming through the sal grasslands and core forests of Similipal National Park.'
   },
   {
     id: 2,
     title: 'Barehipani Waterfall Twin Cascades',
     category: 'waterfalls',
     location: 'Similipal Biosphere Reserve',
-    src: '/images/gallery/gallery-barehipani.jpg',
+    src: '/images/destinations/barehipani.jpg',
     aspect: 'aspect-[3/4]',
     description: 'India’s second tallest waterfall dropping 399 meters through emerald cliff faces.'
   },
   {
     id: 3,
-    title: 'Asian Elephant Herd at Waterhole',
+    title: 'Saltwater Crocodile in Mangrove Estuary',
     category: 'wildlife',
-    location: 'Similipal National Park Core Area',
-    src: '/images/gallery/gallery-elephant.jpg',
-    aspect: 'aspect-[16/10]',
-    description: 'A wild matriarch leading her herd across the perennial forest springs of Similipal.'
+    location: 'Bhitarkanika Sanctuary',
+    src: '/images/destinations/bhitarkanika.png',
+    aspect: 'aspect-[4/3]',
+    description: 'Sunbathing giant estuarine crocodiles and diverse avian life along the dense mangrove river network.'
   },
   {
     id: 4,
     title: 'Rolling Green Peaks of Deomali',
     category: 'mountains',
     location: 'Koraput, Eastern Ghats',
-    src: '/images/gallery/gallery-deomali.jpg',
+    src: '/images/destinations/deomali.png',
     aspect: 'aspect-[16/9]',
     description: 'Endless horizons from the highest elevation in Odisha, shrouded in mountain mist.'
   },
@@ -40,7 +41,7 @@ export const GALLERY_ITEMS = [
     title: 'Konark Sun Chariot Stone Architecture',
     category: 'heritage',
     location: 'Konark Sun Temple, Puri',
-    src: '/images/gallery/gallery-konark.jpg',
+    src: '/images/destinations/konark.png',
     aspect: 'aspect-[4/3]',
     description: 'Intricately sculptured 13th-century sundial wheel carved with micro-precision in Khondalite stone.'
   },
@@ -49,7 +50,7 @@ export const GALLERY_ITEMS = [
     title: 'Joranda Waterfall Plunge',
     category: 'waterfalls',
     location: 'Similipal National Park',
-    src: '/images/gallery/gallery-joranda.jpg',
+    src: '/images/destinations/joranda.png',
     aspect: 'aspect-[3/4]',
     description: 'The single 181-meter unbroken stream echoing through virgin tropical woods.'
   },
@@ -58,25 +59,25 @@ export const GALLERY_ITEMS = [
     title: 'Sunrise over Puri Golden Shore',
     category: 'beaches',
     location: 'Puri Coast, Bay of Bengal',
-    src: '/images/gallery/gallery-puri.jpg',
+    src: '/images/destinations/puri-beach.png',
     aspect: 'aspect-[16/10]',
-    description: 'Golden morning light reflecting off the sacred surf of the Bay of Bengal.'
+    description: 'Golden morning light reflecting off the sacred surf and Blue Flag certified sands.'
   },
   {
     id: 8,
-    title: 'Saltwater Crocodile in Mangrove Estuary',
+    title: 'Debrigarh Lakefront Wildlife Sanctuary',
     category: 'wildlife',
-    location: 'Bhitarkanika Sanctuary',
-    src: '/images/gallery/gallery-crocodile.jpg',
-    aspect: 'aspect-[4/3]',
-    description: 'Sunbathing estuarine crocodile along the muddy riverbanks of the Bhitarkanika network.'
+    location: 'Hirakud Reservoir, Sambalpur',
+    src: '/images/destinations/debrigarh.png',
+    aspect: 'aspect-[16/10]',
+    description: 'Thriving herds of Indian gaur, leopards, and four-horned antelopes along Hirakud shores.'
   },
   {
     id: 9,
     title: 'Daringbadi Pine Forest Mist',
     category: 'mountains',
     location: 'Kandhamal Highlands',
-    src: '/images/gallery/gallery-daringbadi.jpg',
+    src: '/images/destinations/daringbadi.png',
     aspect: 'aspect-[3/4]',
     description: 'The cool scented air of high-altitude pine ridges in the Kashmir of Odisha.'
   },
@@ -85,25 +86,25 @@ export const GALLERY_ITEMS = [
     title: 'Fisherman Boat on Tranquil Chilika',
     category: 'beaches',
     location: 'Chilika Lagoon, Satapada',
-    src: '/images/gallery/gallery-chilika.jpg',
+    src: '/images/destinations/chilika.png',
     aspect: 'aspect-[16/9]',
-    description: 'Traditional wooden canoe skimming the peaceful brackish expanse of Asia\'s largest lagoon.'
+    description: 'Traditional wooden canoe skimming the peaceful brackish expanse of Asia’s largest lagoon.'
   },
   {
     id: 11,
     title: 'Khandadhar Roaring Cascade',
     category: 'waterfalls',
     location: 'Sundergarh Forest Division',
-    src: '/images/gallery/gallery-khandadhar.jpg',
+    src: '/images/destinations/khandadhar.png',
     aspect: 'aspect-[3/4]',
-    description: 'A curtain of white water plunging against dense jungle-clad mountains.'
+    description: 'A magnificent 244-meter sword-shaped cascade plunging against dense jungle-clad mountains.'
   },
   {
     id: 12,
     title: 'Sanctum Towers of Lord Jagannath',
     category: 'heritage',
     location: 'Puri Sriksetra',
-    src: '/images/gallery/gallery-jagannath.jpg',
+    src: '/images/destinations/jagannath.png',
     aspect: 'aspect-[4/3]',
     description: 'The soaring 65-meter spire of the sacred Jagannath Temple crowning the holy town.'
   },
@@ -111,8 +112,8 @@ export const GALLERY_ITEMS = [
     id: 13,
     title: 'Satkosia River Canyon Reflections',
     category: 'wildlife',
-    location: 'Mahanadi Gorge',
-    src: '/images/gallery/gallery-satkosia.jpg',
+    location: 'Mahanadi Gorge, Angul',
+    src: '/images/destinations/satkosia.png',
     aspect: 'aspect-[16/10]',
     description: 'Emerald waters carving through the untouched mountain ridge of the Eastern Ghats.'
   },
@@ -121,7 +122,7 @@ export const GALLERY_ITEMS = [
     title: 'Gopalpur Vintage Coastal Horizon',
     category: 'beaches',
     location: 'Gopalpur-on-Sea, Ganjam',
-    src: '/images/gallery/gallery-gopalpur.jpg',
+    src: '/images/destinations/gopalpur.png',
     aspect: 'aspect-[4/3]',
     description: 'The nostalgic shorelines and rhythmic surf of Odisha’s vintage lighthouse port.'
   },
@@ -130,9 +131,90 @@ export const GALLERY_ITEMS = [
     title: 'Ancient Monastic Rock Carvings',
     category: 'heritage',
     location: 'Udayagiri Caves, Bhubaneswar',
-    src: '/images/gallery/gallery-udayagiri.jpg',
+    src: '/images/destinations/udayagiri.png',
     aspect: 'aspect-[16/9]',
     description: 'Rock-cut historical arches sculpted more than 2,000 years ago during the Chedi dynasty.'
+  },
+  {
+    id: 16,
+    title: 'Sanaghagara Picturesque Forest Cascade',
+    category: 'waterfalls',
+    location: 'Kendujhar (Keonjhar), Odisha',
+    src: '/images/destinations/sanaghagara.png',
+    aspect: 'aspect-[4/3]',
+    description: 'Peaceful perennial waterfall flowing through rolling hilly terrain with dense forested slopes.'
+  },
+  {
+    id: 17,
+    title: 'Spotted Chital Deer at Chahala Meadows',
+    category: 'wildlife',
+    location: 'Similipal Tiger Reserve Core',
+    src: '/images/destinations/chahala.png',
+    aspect: 'aspect-[16/10]',
+    description: 'Wide open meadow clearings frequented by chital deer, barking deer, and wild peacocks.'
+  },
+  {
+    id: 18,
+    title: 'Lingaraj Kalinga Temple Majesty',
+    category: 'heritage',
+    location: 'Ekamra Kshetra, Bhubaneswar',
+    src: '/images/destinations/lingaraj.png',
+    aspect: 'aspect-[4/3]',
+    description: 'The pinnacle of Kalinga stone craftsmanship towering 55 meters above the temple city.'
+  },
+  {
+    id: 19,
+    title: 'Chandrabhaga Blue Flag Shore',
+    category: 'beaches',
+    location: 'Konark Coast, Bay of Bengal',
+    src: '/images/destinations/chandrabhaga.jpg',
+    aspect: 'aspect-[16/9]',
+    description: 'Pristine golden sands and gentle waves along the sacred Marine Drive of Konark.'
+  },
+  {
+    id: 20,
+    title: 'Dhauli White Peace Pagoda',
+    category: 'heritage',
+    location: 'Dhauli Hills, Daya River',
+    src: '/images/destinations/dhauli.png',
+    aspect: 'aspect-[16/10]',
+    description: 'Historic Buddhist stupa marking Emperor Ashoka’s transformation towards universal peace.'
+  },
+  {
+    id: 21,
+    title: 'Ramatirtha Mugger Conservation Centre',
+    category: 'wildlife',
+    location: 'Khairi-Bhandan River, Jashipur',
+    src: '/images/destinations/ramatirtha.png',
+    aspect: 'aspect-[4/3]',
+    description: 'Revered river confluence dedicated to the conservation of endangered mugger crocodiles.'
+  },
+  {
+    id: 22,
+    title: 'Barehipani Rainbow Canyon & Gorge',
+    category: 'waterfalls',
+    location: 'Similipal Biosphere Reserve',
+    src: '/images/destinations/barehipani-rainbow.jpg',
+    aspect: 'aspect-[3/4]',
+    description: 'Sunlight creating vivid rainbows through the soaring canyon mist above the gorge pool.'
+  },
+  {
+    id: 23,
+    title: 'Wild Elephants in Devasthali Grasslands',
+    category: 'wildlife',
+    location: 'Similipal Core Reserve',
+    src: '/images/destinations/devasthali.png',
+    aspect: 'aspect-[16/9]',
+    description: 'Expansive river valley meadow known as the primary gathering corridor for wild Asian elephants.'
+  },
+  {
+    id: 24,
+    title: 'Mahendragiri Cloud-Kissed Mountain Peak',
+    category: 'mountains',
+    location: 'Gajapati, Eastern Ghats',
+    src: '/images/destinations/mahendragiri.png',
+    aspect: 'aspect-[16/9]',
+    description: 'Odisha’s mythological biodiversity hotspot perched high above the clouds.'
   }
 ];
 

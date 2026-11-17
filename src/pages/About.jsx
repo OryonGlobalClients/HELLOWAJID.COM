@@ -12,7 +12,7 @@ export default function About() {
     },
     {
       title: 'Untamed Wildlife',
-      image: '/images/gallery/gallery-tiger.jpg',
+      image: '/images/destinations/similipal.jpg',
       desc: 'Royal Bengal tigers, Asian wild elephants, Irrawaddy dolphins, and world-record saltwater crocodiles.'
     },
     {
@@ -160,7 +160,7 @@ export default function About() {
                 </div>
                 <div className="relative rounded-2xl overflow-hidden aspect-[3/4] border border-forest-800/50">
                   <img
-                    src="/images/gallery/gallery-tiger.jpg"
+                    src="/images/destinations/similipal.jpg"
                     alt="Similipal Tiger Reserve"
                     className="w-full h-full object-cover"
                   />

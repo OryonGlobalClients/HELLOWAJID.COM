@@ -306,7 +306,7 @@ export default function Home() {
                   {/* Royal Bengal Tiger in Sal Canopies */}
                   <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] border border-forest-700/50 shadow-2xl group bg-forest-950">
                     <img
-                      src="/images/gallery/gallery-tiger.jpg"
+                      src="/images/destinations/similipal.jpg"
                       alt="Royal Bengal Tiger in Virgin Sal Canopies"
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -339,7 +339,7 @@ export default function Home() {
                   {/* Wild Elephant Herd */}
                   <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/5] border border-forest-700/50 shadow-2xl group bg-forest-950">
                     <img
-                      src="/images/gallery/gallery-elephant.jpg"
+                      src="/images/destinations/devasthali.jpg"
                       alt="Wild Asian Elephants Similipal"
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

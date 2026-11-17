@@ -5,7 +5,7 @@ import { PACKAGES as DEFAULT_PACKAGES } from '../data/packages';
 const DataContext = createContext(null);
 
 const STORAGE_KEYS = {
-  GALLERY: 'ot_custom_gallery_v1',
+  GALLERY: 'ot_custom_gallery_v2',
   PACKAGES: 'ot_custom_packages_v2',
 };
 

@@ -41,7 +41,7 @@ export default function Gallery() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('/images/gallery/gallery-tiger.jpg')`,
+            backgroundImage: `url('/images/destinations/similipal.jpg')`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#08140c] via-black/60 to-black/75" />
