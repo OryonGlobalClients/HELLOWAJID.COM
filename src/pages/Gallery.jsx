@@ -57,7 +57,7 @@ export default function Gallery() {
           </h1>
 
           <p className="text-xs sm:text-base md:text-lg text-cream-200/90 font-light max-w-2xl mx-auto leading-relaxed">
-            High-definition glimpses of Similipal tigers, twin waterfalls, mist-kissed ridges, and ancient sacred Kalinga temple architecture.
+            Authentic photography of Similipal wild life, rare fauna, blooming flora, Santhal tribal life, ancient Mayurbhanj culture, and roaring waterfalls.
           </p>
         </div>
       </section>

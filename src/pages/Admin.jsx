@@ -824,11 +824,11 @@ export default function Admin() {
                       onChange={(e) => setGalleryFormData({ ...galleryFormData, category: e.target.value })}
                       className="w-full px-3 py-2.5 rounded-xl bg-forest-900/80 border border-forest-800 text-sm text-white focus:border-forest-500 focus:outline-none"
                     >
-                      <option value="wildlife">Wildlife</option>
-                      <option value="waterfalls">Waterfalls</option>
-                      <option value="beaches">Beaches & Lakes</option>
-                      <option value="mountains">Mountains & Forests</option>
-                      <option value="heritage">Heritage & Temples</option>
+                      {GALLERY_CATEGORIES.filter(c => c.id !== 'all').map((c) => (
+                        <option key={c.id} value={c.id} className="bg-forest-950 text-white">
+                          {c.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
