@@ -9,6 +9,7 @@ export const DESTINATIONS = [
     image: '/images/destinations/similipal.jpg',
     gallery: [
       '/images/destinations/similipal.jpg',
+      '/images/destinations/royal-bengal-tiger.jpg',
       '/images/destinations/chahala.png',
       '/images/destinations/devasthali.png',
       '/images/destinations/barehipani.jpg'

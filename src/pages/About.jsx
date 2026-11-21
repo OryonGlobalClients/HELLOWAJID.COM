@@ -160,7 +160,7 @@ export default function About() {
                 </div>
                 <div className="relative rounded-2xl overflow-hidden aspect-[3/4] border border-forest-800/50">
                   <img
-                    src="/images/destinations/similipal.jpg"
+                    src="/images/destinations/royal-bengal-tiger.jpg"
                     alt="Similipal Tiger Reserve"
                     className="w-full h-full object-cover"
                   />

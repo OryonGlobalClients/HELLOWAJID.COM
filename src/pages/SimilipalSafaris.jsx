@@ -27,7 +27,7 @@ export default function SimilipalSafaris() {
       capacity: 'Up to 6 Persons / Vehicle',
       price: '₹3,800',
       priceUnit: 'per vehicle',
-      image: '/images/destinations/similipal.jpg',
+      image: '/images/destinations/royal-bengal-tiger.jpg',
       badge: 'Most Popular',
       overview: 'Rugged open-top 4x4 expedition through core sal trails, deep waterholes, and the famous Chahala salt-lick where melanistic tigers and leopards roam.',
       highlights: [
@@ -144,7 +144,7 @@ export default function SimilipalSafaris() {
     {
       name: 'Gurguria & Jamuani Valleys',
       type: 'Eco-Tourism & Canopy',
-      image: '/images/destinations/similipal.jpg',
+      image: '/images/destinations/royal-bengal-tiger.jpg',
       desc: 'Lush valleys flanked by bubbling streams, home to the indigenous orchidarium housing 80+ wild orchid varieties, pine forests, and eco-cottages nestled inside the forest canopy.'
     }
   ];

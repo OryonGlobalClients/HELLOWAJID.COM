@@ -306,7 +306,7 @@ export default function Home() {
                   {/* Royal Bengal Tiger in Sal Canopies */}
                   <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] border border-forest-700/50 shadow-2xl group bg-forest-950">
                     <img
-                      src="/images/destinations/similipal.jpg"
+                      src="/images/destinations/royal-bengal-tiger.jpg"
                       alt="Royal Bengal Tiger in Virgin Sal Canopies"
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

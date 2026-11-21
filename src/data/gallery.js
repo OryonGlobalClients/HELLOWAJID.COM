@@ -5,7 +5,7 @@ export const GALLERY_ITEMS = [
     title: 'Royal Bengal Tiger in Similipal Meadows',
     category: 'wildlife',
     location: 'Similipal Tiger Reserve, Mayurbhanj',
-    src: '/images/destinations/similipal.jpg',
+    src: '/images/destinations/royal-bengal-tiger.jpg',
     aspect: 'aspect-[4/3]',
     description: 'The elusive apex predator roaming through the sal grasslands and core forests of Similipal National Park.'
   },
