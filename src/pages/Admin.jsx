@@ -29,7 +29,7 @@ import { GALLERY_CATEGORIES } from '../data/gallery';
 
 const ADMIN_CREDENTIALS = {
   username: 'hellowajid',
-  password: '12345678',
+  password: 'hellowajid@123',
 };
 
 const STORAGE_AUTH_KEY = 'ot_admin_authenticated';
@@ -111,10 +111,10 @@ export default function Admin() {
     e.preventDefault();
     setLoginError('');
 
-    const cleanUser = loginForm.username.trim();
+    const cleanUser = loginForm.username.trim().toLowerCase();
     const cleanPass = loginForm.password.trim();
 
-    if (cleanUser === ADMIN_CREDENTIALS.username && cleanPass === ADMIN_CREDENTIALS.password) {
+    if (cleanUser === ADMIN_CREDENTIALS.username.toLowerCase() && cleanPass === ADMIN_CREDENTIALS.password) {
       sessionStorage.setItem(STORAGE_AUTH_KEY, 'true');
       setIsAuthenticated(true);
       showToast(`Welcome back, ${ADMIN_CREDENTIALS.username}!`);
